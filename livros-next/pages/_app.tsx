@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import '../styles/globlas.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../app/globals.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 

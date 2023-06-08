@@ -4,26 +4,26 @@ import ControleLivros from './controle/ControleLivros';
 import ControleEditora from './controle/ControleEditora';
 
 const LivroDados = () =>{
-const controleLivro = new ControleLivros();
-const controleEditora = new ControleEditora();
+  const controleLivro = new ControleLivros();
+  const controleEditora = new ControleEditora();
 
 
-const opcoes = controleEditora.getEditoras().map((editora) => ({
-    value: editora.codEditora,
-    text: editora.nome,
-}));
+  const opcoes = controleEditora.getEditoras().map((editora) => ({
+      value: editora.codEditora,
+      text: editora.nome,
+  }));
 
-const [titulo, setTitulo] = useState('');
-const [resumo, setResumo] = useState('');
-const [autores, setAutores] = useState('');
-const [codEditora, setCodEditora] = useState(opcoes[0].value);
+  const [titulo, setTitulo] = useState('');
+  const [resumo, setResumo] = useState('');
+  const [autores, setAutores] = useState('');
+  const [codEditora, setCodEditora] = useState(opcoes[0].value);
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const tratarCombo = event => {
-  const codigoEditora = Number( event.target.selectedOptions[0].value );
-  setCodEditora( codigoEditora );
-};
+  const tratarCombo = event => {
+    const codigoEditora = Number( event.target.selectedOptions[0].value );
+    setCodEditora( codigoEditora );
+  };
 
   const incluir = event => {
 

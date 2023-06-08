@@ -40,7 +40,7 @@ const LivroLista =()=> {
       };
   
       obterLivros();
-    });
+    },[carregado]);
   
     const excluir = codigo => {
       controleLivro.excluir(codigo);
