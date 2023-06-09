@@ -16,14 +16,14 @@ interface Livro {
 
 const baseURL = 'http://localhost:3000/api/livros';
 
+
 const LivroDados: React.FC = () => {
+  const opcoes = controleEditora.getEditoras();
   const [titulo, setTitulo] = useState('');
   const [resumo, setResumo] = useState('');
   const [autores, setAutores] = useState('');
-  const [codEditora, setCodEditora] = useState(1);
+  const [codEditora, setCodEditora] = useState(opcoes[0].codEditora);
 
-  const opcoes = controleEditora.getEditoras();
-  
   const incluirLivro = async (livro: Livro) => {
     const response = await fetch(baseURL, {
       method: 'POST',
