@@ -57,7 +57,7 @@ const LivroDados: React.FC = () => {
 
     await incluirLivro(livro);
 
-    Router.push('/livroLista');
+    Router.push('/LivroLista');
 
   };
 
